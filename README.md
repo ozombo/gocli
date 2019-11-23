@@ -12,6 +12,16 @@ cd gocli
 
 go build main.go
 
+#using aliases
 ./main p for peanuts and beer
 ./main s for suya and beer
 ./main ps for pepper soup and beer
+
+#using names
+./main peanuts for peanuts and beer
+./main suya for suya and beer
+./main peppersoup for pepper soup and beer
+
+#help and info
+./main --help
+./main --version

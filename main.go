@@ -19,13 +19,14 @@ func info() {
 	app.Version = "1.0.0"
 }
 
+//commands called from CLI package
 func commands() {
 	app.Commands = []cli.Command{
 		{
-			Name:    "peanuts",
-			Aliases: []string{"p"},
+			Name:    "peanuts",     //commands name
+			Aliases: []string{"p"}, //command alias
 			Usage:   "Add peanuts to your beer",
-			Action: func(c *cli.Context) {
+			Action: func(c *cli.Context) { //action to be taken, append command name to beer var
 				pe := "peanuts"
 				peanuts := append(beer, pe)
 				m := strings.Join(peanuts, " ")
@@ -33,7 +34,7 @@ func commands() {
 			},
 		},
 		{
-			Name:    "pepper soup",
+			Name:    "peppersoup",
 			Aliases: []string{"ps"},
 			Usage:   "Add pepper soup to your beer",
 			Action: func(c *cli.Context) {
